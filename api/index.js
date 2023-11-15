@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import userRouter from './routes/user.router.js'
 import authRouter from './routes/auth.route.js'
 import cookieParser from 'cookie-parser';
+import listingRouter from './routes/listing.route.js';
 
 dotenv.config();
 // require('dotenv').config();
@@ -28,7 +29,7 @@ app.listen(3000, () => {
 
 app.use("/api/user",userRouter);
 app.use("/api/auth",authRouter)
-
+app.use('/api/listing', listingRouter);
 
 //middleware is created to handle error
 app.use((err,req,res,next) => {
