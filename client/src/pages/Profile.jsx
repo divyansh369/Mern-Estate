@@ -130,7 +130,6 @@ export default function Profile() {
       setShowListingsError(true);
     }
   };
-
   const handleListingDelete = async (listingId) => {
     try {
       const res = await fetch(`/api/listing/delete/${listingId}`, {
@@ -141,7 +140,6 @@ export default function Profile() {
         console.log(data.message);
         return;
       }
-
       setUserListings((prev) =>
         prev.filter((listing) => listing._id !== listingId)
       );
@@ -236,7 +234,6 @@ export default function Profile() {
       <p className='text-red-700 mt-5'>
         {showListingsError ? 'Error showing listings' : ''}
       </p>
-
       {userListings && userListings.length > 0 && (
         <div className='flex flex-col gap-4'>
           <h1 className='text-center mt-7 text-2xl font-semibold'>
@@ -260,7 +257,6 @@ export default function Profile() {
               >
                 <p>{listing.name}</p>
               </Link>
-
               <div className='flex flex-col item-center'>
                 <button
                   onClick={() => handleListingDelete(listing._id)}
@@ -268,7 +264,9 @@ export default function Profile() {
                 >
                   Delete
                 </button>
-                <button className='text-green-700 uppercase'>Edit</button>
+                <Link to={`/update-listing/${listing._id}`}>
+                  <button className='text-green-700 uppercase'>Edit</button>
+                </Link>
               </div>
             </div>
           ))}
