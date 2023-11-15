@@ -8,7 +8,6 @@ import {
 import { app } from '../firebase';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
 export default function CreateListing() {
   const { currentUser } = useSelector((state) => state.user);
   const navigate = useNavigate();
@@ -31,7 +30,7 @@ export default function CreateListing() {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-
+  console.log(formData);
   const handleImageSubmit = (e) => {
     if (files.length > 0 && files.length + formData.imageUrls.length < 7) {
       setUploading(true);
@@ -58,7 +57,6 @@ export default function CreateListing() {
       setUploading(false);
     }
   };
-
   const storeImage = async (file) => {
     return new Promise((resolve, reject) => {
       const storage = getStorage(app);
@@ -83,14 +81,12 @@ export default function CreateListing() {
       );
     });
   };
-
   const handleRemoveImage = (index) => {
     setFormData({
       ...formData,
       imageUrls: formData.imageUrls.filter((_, i) => i !== index),
     });
   };
-
   const handleChange = (e) => {
     if (e.target.id === 'sale' || e.target.id === 'rent') {
       setFormData({
@@ -98,7 +94,6 @@ export default function CreateListing() {
         type: e.target.id,
       });
     }
-
     if (
       e.target.id === 'parking' ||
       e.target.id === 'furnished' ||
@@ -109,7 +104,6 @@ export default function CreateListing() {
         [e.target.id]: e.target.checked,
       });
     }
-
     if (
       e.target.type === 'number' ||
       e.target.type === 'text' ||
@@ -121,7 +115,6 @@ export default function CreateListing() {
       });
     }
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -143,17 +136,10 @@ export default function CreateListing() {
       });
       const data = await res.json();
       setLoading(false);
-
       if (data.success === false) {
         setError(data.message);
-      } else {
-        if (data._id) {
-          navigate(`/listing/${data._id}`);
-        } else {
-          console.error('Invalid data received from the server:', data);
-          setError('Invalid data received from the server');
-        }
       }
+      navigate(`/listing/${data._id}`);
     } catch (error) {
       setError(error.message);
       setLoading(false);
@@ -246,7 +232,7 @@ export default function CreateListing() {
               />
               <span>Offer</span>
             </div>
-          </div>  
+          </div>
           <div className='flex flex-wrap gap-6'>
             <div className='flex items-center gap-2'>
               <input
@@ -287,7 +273,9 @@ export default function CreateListing() {
               />
               <div className='flex flex-col items-center'>
                 <p>Regular price</p>
-                <span className='text-xs'>($ / month)</span>
+                {formData.type === 'rent' && (
+                  <span className='text-xs'>($ / month)</span>
+                )}
               </div>
             </div>
             {formData.offer && (
@@ -304,7 +292,10 @@ export default function CreateListing() {
                 />
                 <div className='flex flex-col items-center'>
                   <p>Discounted price</p>
-                  <span className='text-xs'>($ / month)</span>
+
+                  {formData.type === 'rent' && (
+                    <span className='text-xs'>($ / month)</span>
+                  )}
                 </div>
               </div>
             )}
