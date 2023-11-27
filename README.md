@@ -7,6 +7,7 @@ Real estate app using **Node.js, Express JS, MongoDB, React JS and the EJS templ
 
 
 ![Mern Estate app ss](https://github.com/divyansh369/Mern-Estate/blob/main/upload/Screenshot%20(138).png)
+![Mern Estate app ss](https://github.com/divyansh369/Mern-Estate/blob/main/upload/Screenshot%20(139).png)
 
 
 ### Built With 🏗️
@@ -20,6 +21,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 * ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 * ![React JS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+* ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
 
 
 
@@ -114,23 +116,41 @@ The project structure is as follows:
    * `Models:`  "_listing.nodel.js_" contains the database model for the listing schema.
                 "_user.nodel.js_" contains the database model for the user profile schema.
 
-   * `routes:` The model for file schema .
+   * `routes:` Routes for the post,delete,create,update and get listing .
 
-* `public:` This directory contains static files such as CSS stylesheets.
-   * `styles.css:` This file contains the CSS stylesheets for the application.
+   * `Controller:` Controller for the bussiness logic of the routes .
+
+    * `Utils:`  General purposed utility class using which we can reuse the existing block of code without creating instance of the class .
+
+* `Client:` This directory contains dynamic files for the user interface.
    * `app.js:` This file contains how the uploading works
 
-* `views:` This directory contains the EJS templates used to render the HTML pages.
-
-   * `cleanup.ejs:` The cleanup template that is included in other EJS files.
-
-   * `download.ejs:` The download template that is included in other EJS files .
-
-   * `filePreview.ejs:` The template for the preview of the file whether file send is correct or not.
-
-   * `files.ejs:` The template for the time limit .
-     
-   * `home.ejs:` The template for the home section for user to interact with app.
+   * `Pages:` This directory contains the EJS templates used to render the user interface pages.
+   
+      * `About.jsx:` This page give the user interface tells about the mern estate owne
+        
+      * `CreateListing.jsx:` This page creates the listing to provide the user to upload the estate they want .
+   
+      * `Home.jsx:` This page give the user interface for the home page.
+   
+      * `Profile.jsx:` The template contains the interface for the profile of the user .
+        
+      * `Search.jsx:` The template contains the search page for the user to search the estate according to their and apply the filter.
+      
+      *  `SignIn.jsx:` The template contains the sign in page for the user to sign in.
+      
+      *  `SignUp.jsx:` The template contains the sign up page for the user to sign up if user not exist.
+   
+   * `Components:` This directory contains the logic for the reusable code.
+   
+      * `Contact.jsx:` This page give the user to contact the landlord of the estate owner .
+        
+      * `Header.jsx:` This page contains the header of the mern estate app .
+   
+      * `ListingItem.jsx:` This page contains the listing which is uploaded by the user .
+   
+      * `OAuth.jsx:` The template contains the google authorization for the user giving the user to directly sign in directly using google acccount.
+        
      
 ---
 
@@ -141,7 +161,7 @@ If you have any suggestions or improvements, feel free to create an issue or sub
 
 ---
 ## Acknowledgements 👍
-This project was created using Node.js, Express, MongoDB, and the EJS templating engine. 
+This project was created using React.js, Node.js, Express.js and MongoDB .
 
 Special thanks to the authors and contributors of these technologies for their valuable work. 
 
@@ -160,7 +180,8 @@ Special thanks to the authors and contributors of these technologies for their v
 ---
 
 
-https://github.com/divyansh369/File-sharing/assets/71817815/515b5618-808f-432c-b35b-ea70c19492ab
+![Mern Estate app ss](https://github.com/divyansh369/Mern-Estate/blob/main/upload/Screenshot%20(140).png)
+![Mern Estate app ss](https://github.com/divyansh369/Mern-Estate/blob/main/upload/Screenshot%20(141).png)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
