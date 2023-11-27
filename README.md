@@ -93,7 +93,7 @@ To run the MERN Estate, perform the following actions:
 
 7. Open a web browser and navigate to [localhost:3000](http://localhost:3000) to access the application. Use [localhost:3000](http://localhost:3000) and whatever you want to create on file sharing app.
 
-## Usage
+## Usage 🔥 
 
 * __Home Page (http://localhost:3000):__ This is the default page that shows the estate marketplace front page. 
 You can view estates and sign-in and if new user then sign-up and create a account .
@@ -108,7 +108,7 @@ You can view estates and sign-in and if new user then sign-up and create a accou
 
 
 
-## Project Structure
+## Project Structure 📁 
 The project structure is as follows:
 
 * `Api:` The main entry point of the application. It configures the server, sets up the routes, and connects to the database.
@@ -154,7 +154,7 @@ The project structure is as follows:
      
 ---
 
-## Contributing 
+## Contributing 🤝
 Contributions are welcome! 
 
 If you have any suggestions or improvements, feel free to create an issue or submit a pull request.
@@ -167,7 +167,7 @@ Special thanks to the authors and contributors of these technologies for their v
 
 ---
 
-## 🚀 About Me
+## About Me 🚀
 
 * I'm a final year B.tech undergraduate and a full-stack developer.
 
