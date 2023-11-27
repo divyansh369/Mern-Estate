@@ -111,7 +111,7 @@ The project structure is as follows:
 
 * `Api:` The main entry point of the application. It configures the server, sets up the routes, and connects to the database.
    
-   **Models:**  "_listing.nodel.js_" contains the database model for the listing schema.
+   * `Models:`  "_listing.nodel.js_" contains the database model for the listing schema.
                 "_user.nodel.js_" contains the database model for the user profile schema.
 
    * `routes:` The model for file schema .
