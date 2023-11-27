@@ -7,7 +7,7 @@ Real estate app using **Node.js, Express JS, MongoDB, React JS and the EJS templ
 ![Mern Estate app ss](https://github.com/divyansh369/Mern-Estate/blob/main/upload/Screenshot%20(139).png)
 
 
-### Built With 🏗️
+## Built With 🏗️
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
