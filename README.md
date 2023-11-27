@@ -1,6 +1,3 @@
-# 
-Real estate app using mern and tailwind css
-
 # Mern-Estate App ⭐
 
 Real estate app using **Node.js, Express JS, MongoDB, React JS and the EJS templating engine** based application designed to help users operating an online marketplace for short and long-term homestays and experiences. .
